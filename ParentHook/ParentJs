@@ -1,0 +1,25 @@
+import { LightningElement,api } from 'lwc';
+export default class ParentHook extends LightningElement {
+    @api displayChild = false;
+    constructor(){
+        super();
+        console.log('Constructor From Parent');
+    }
+    connectedCallback(event) {
+        console.log('connectedCallback From Parent');
+    }
+    renderedCallback(){
+        console.log('renderedCallback From Parent');
+    }
+    errorCallback(error, stack) {
+        console.log('errorCallback From Parent');
+        console.log('Error : ',error);
+        console.log('stack : ',stack);
+    }
+    disconnectedCallback() {
+        console.log('Disconnected call back from parent');
+    }
+    changeHandler(event){
+        this.displayChild = event.target.checked;
+    }
+}
