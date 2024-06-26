@@ -1,0 +1,3 @@
+<template>
+    <p class="slds-p-around_small">Child Component is Calling</p>
+</template>
