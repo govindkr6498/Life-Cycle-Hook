@@ -1,0 +1,19 @@
+import { LightningElement } from 'lwc';
+export default class ChildHook extends LightningElement {
+    constructor(){
+        super();
+        console.log('Constructor From Child');
+    }
+    connectedCallback() {
+        console.log('connectedCallback From Child');
+    }
+    renderedCallback(){
+        console.log('renderedCallback From Child');
+    }
+    errorCallback(error, stack) {
+        console.log('errorCallback From Child');;
+    }
+    disconnectedCallback() {
+        console.log('Disconnected call back from Child');
+    }
+}
